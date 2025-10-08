@@ -1,0 +1,122 @@
+GW2 CommKit: Technical Blueprint
+1. Executive Summary
+
+GW2 CommKit is a client-side, single-page application (SPA) built with React and TypeScript. It functions entirely within the user's browser, using localStorage for data persistence. The application provides Guild Wars 2 players with tools for event scheduling, leveraging both static timer data for real-time accuracy and the Google Gemini API for dynamic, intelligent schedule generation. It also integrates with the official Guild Wars 2 API for personalized account data. The UI is modern, responsive, and styled with Tailwind CSS to create a cohesive, game-themed experience.
+2. Application Architecture
+
+The application follows a modern, frontend-only architecture, eliminating the need for a dedicated backend server.
+
+    Framework: React 18 using functional components and hooks (useState, useEffect, useContext, useMemo, useCallback, useRef).
+
+    Language: TypeScript is used for all application code, providing strict typing and improved developer experience. Type definitions (AppEvent, User, Run, etc.) enforce a clear data structure throughout the app.
+
+    Module System: The application avoids a complex build pipeline by using a native ESM-based approach. The index.html file includes an importmap which allows bare module specifiers (e.g., "react") to be resolved directly from the esm.sh CDN. This simplifies setup and development.
+
+    Component Structure: The application is broken down into two main types of components:
+
+        Page Components: (CommanderToolkitPage, DailiesPage, etc.) - Each represents a main tab/view within the application.
+
+        Reusable UI Components: (EventItem, TimelineGraph, EventForm, LoadingSpinner) - These are presentational components used across different pages to maintain a consistent UI.
+
+    Data Persistence: The user's profile, settings, saved event runs, and favorites are stored in the browser's localStorage. The useUser custom hook acts as a centralized interface for all localStorage interactions, ensuring consistent data handling.
+
+3. Data Flow & State Management
+
+State is managed primarily at the component level, with React Context used for globally accessible data and functions.
+
+    User State (useUser hook): This is the single source of truth for all user-related data.
+
+        It initializes by reading from localStorage.
+
+        It provides an updateUser function that updates both the React state and localStorage simultaneously, ensuring data synchronization.
+
+        It exposes the current user object, login, register, and logout methods to the application.
+
+    Event Schedule State (events): The main array of AppEvent objects is held in the App component's state. It is passed down as a prop to the CommanderToolkitPage, which can modify it via the setEvents state setter. This allows actions like generating a new run or loading a saved one to correctly update the displayed timetable.
+
+    Global Notification State (ToastContext): A React Context provides a showToast function to any component in the tree. This decouples the notification logic from the components that trigger them, allowing any part of the app to display a consistent, non-blocking notification message.
+
+4. API & Data Integration
+
+The application integrates with three distinct data sources.
+4.1. Google Gemini API (@google/genai)
+
+    Purpose: To generate unique, optimized meta-event schedules ("runs") in the CommanderToolkitPage.
+
+    Implementation:
+
+        Initialization: The Gemini client is instantiated with new GoogleGenAI({ apiKey: process.env.API_KEY }). The API key is assumed to be available as an environment variable in the execution context.
+
+        Prompt Engineering: A carefully constructed prompt is sent to the gemini-2.5-flash model. The prompt instructs the AI to act as an expert GW2 commander, adhere to specific constraints (e.g., logical flow, no overlaps), and, most importantly, return its response in a strictly defined JSON format.
+
+        API Call: The ai.models.generateContent method is used to send the request.
+
+        Response Handling: The text from the response.text property is extracted. Any surrounding markdown code fences (e.g., ```json) are stripped, and the cleaned string is parsed using JSON.parse().
+
+        Error Handling: The API call is wrapped in a try...catch block. If the call fails or the response cannot be parsed, an error is logged, and a user-friendly toast notification is displayed.
+
+4.2. Static Event Data (GW2_NINJA_TIMER_DATA)
+
+    Purpose: To provide a real-time, accurate timetable of all major, repeating in-game events. This data is hardcoded into index.tsx.
+
+    calculateSchedule Algorithm: This core function is responsible for interpreting the static data.
+
+        It iterates through each event category (e.g., wb, hwb, vb).
+
+        It calculates a base start time for the event's cycle, accounting for any partial (one-time) sequences that run before the main pattern.
+
+        Using the total duration of the repeating pattern and the current time, it calculates how many full cycles have passed since the base start time.
+
+        This allows it to determine the precise start time of the current cycle.
+
+        It then projects the event schedule forward from this point, creating AppEvent objects for each occurrence.
+
+        Finally, it filters this list to only include events happening within a predefined window (e.g., starting in the last 30 minutes and upcoming in the next 6 hours).
+
+4.3. Official Guild Wars 2 API
+
+    Purpose: To fetch personalized account data for features like Dailies completion and the Locked Dyes list.
+
+    Implementation:
+
+        API Key: The user provides their GW2 API key in the Settings page, which is stored in localStorage.
+
+        Data Fetching: The native fetch API is used to make requests to various authenticated endpoints (e.g., /v2/account/achievements, /v2/account/dyes).
+
+        Efficiency: Promise.all and Promise.allSettled are used to run multiple API requests in parallel, significantly speeding up data retrieval on pages like the Dailies tab.
+
+        Rate Limiting/Pagination: For potentially large datasets (like the list of all dyes), the application fetches details in chunks of 200 IDs per request to stay within API limits and ensure reliability.
+
+5. UI/UX Design & Styling
+
+The application's design is heavily influenced by modern gaming UIs, aiming for a clean, dark, and functional aesthetic.
+
+    Styling Engine: Tailwind CSS is used for all styling. This utility-first approach allows for rapid development and maintains consistency.
+
+    Custom Design System:
+
+        Containers: A custom class gw2-container-border defines the standard look for all primary content blocks, featuring a dark background (slate-800) and a subtle border (slate-700).
+
+        Buttons: A custom gw2-button class establishes a consistent style for all interactive buttons, with clear hover, disabled, and active states.
+
+        Color Palette: The core palette uses deep slate for backgrounds and vibrant indigo for primary interactive elements. Accent colors are used semantically:
+
+            Green: Active state, success, completion.
+
+            Yellow/Amber: Upcoming events, warnings, favorites.
+
+            Teal/Sky Blue: Categorization for Meta/Other events.
+
+            Red: Deletion, errors, "NOW" marker.
+
+    Responsiveness: The layout is fully responsive, using Tailwind's breakpoint modifiers, flexbox, and grid to ensure usability on devices ranging from mobile phones to large desktops.
+
+    User Feedback:
+
+        Loaders & Skeletons: LoadingSpinner components and disabled buttons provide clear feedback during data fetching.
+
+        Animations: Subtle animations on timers, progress bars (animate-pulse-glow), and toast notifications (animate-fade-in-out) enhance the user experience.
+
+        Tooltips: The timeline graph provides a tooltip on hover for quick event identification.
+
+    Accessibility: Basic accessibility is achieved through semantic HTML (<nav>, <main>, <button>). Actionable elements are <button> tags, and forms use <label> tags. Further improvements could include more extensive use of ARIA attributes for dynamic content.
