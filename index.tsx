@@ -19,26 +19,26 @@ type EventTimerInfo = {
 // --- STATIC TIMER DATA ---
 // Data is now complete with all waypoints and strictly typed using 'as const'.
 const GW2_NINJA_TIMER_DATA = {
-	"events": {
-		"wb": { "category": "Core Tyria", "name": "World bosses", "segments": { "1": { "name": "Admiral Taidha Covington", "chatlink": "[&BKgBAAA=]" }, "2": { "name": "Claw of Jormag", "chatlink": "[&BHoCAAA=]" }, "3": { "name": "Fire Elemental", "chatlink": "[&BEcAAAA=]" }, "4": { "name": "Golem Mark II", "chatlink": "[&BNQCAAA=]" }, "5": { "name": "Great Jungle Wurm", "chatlink": "[&BEEFAAA=]" }, "6": { "name": "Megadestroyer", "chatlink": "[&BM0CAAA=]" }, "7": { "name": "Modniir Ulgoth", "chatlink": "[&BLAAAAA=]" }, "8": { "name": "Shadow Behemoth", "chatlink": "[&BPcAAAA=]" }, "9": { "name": "Svanir Shaman Chief", "chatlink": "[&BMIDAAA=]" }, "10": { "name": "The Shatterer", "chatlink": "[&BE4DAAA=]" } }, "sequences": { "partial": [], "pattern": [ { "r": 1, "d": 15 }, { "r": 9, "d": 15 }, { "r": 6, "d": 15 }, { "r": 3, "d": 15 }, { "r": 10, "d": 15 }, { "r": 5, "d": 15 }, { "r": 7, "d": 15 }, { "r": 8, "d": 15 }, { "r": 4, "d": 15 }, { "r": 9, "d": 15 }, { "r": 2, "d": 15 }, { "r": 3, "d": 15 }, { "r": 1, "d": 15 }, { "r": 5, "d": 15 }, { "r": 6, "d": 15 }, { "r": 8, "d": 15 }, { "r": 10, "d": 15 }, { "r": 9, "d": 15 }, { "r": 7, "d": 15 }, { "r": 3, "d": 15 }, { "r": 4, "d": 15 }, { "r": 5, "d": 15 }, { "r": 2, "d": 15 }, { "r": 8, "d": 15 } ] } },
-		"hwb": { "category": "Core Tyria", "name": "Hard world bosses", "segments": { "0": { "name": "" }, "1": { "name": "Triple Trouble", "chatlink": "[&BKoBAAA=]" }, "2": { "name": "Karka Queen", "chatlink": "[&BNUGAAA=]" }, "3": { "name": "Tequatl the Sunless", "chatlink": "[&BNABAAA=]" } }, "sequences": { "partial": [ { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 30 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 90 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 120 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 120 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 30 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 150 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 } ], "pattern": [] } },
-		"la": { "category": "Core Tyria", "name": "Ley-Line Anomaly", "segments": { "0": { "name": "" }, "1": { "name": "Timberline Falls", "chatlink": "[&BEwCAAA=]" }, "2": { "name": "Iron Marches", "chatlink": "[&BOcBAAA=]" }, "3": { "name": "Gendarran Fields", "chatlink": "[&BOQAAAA=]" } }, "sequences": { "partial": [ { "r": 0, "d": 20 }, { "r": 1, "d": 20 }, { "r": 0, "d": 100 }, { "r": 2, "d": 20 }, { "r": 0, "d": 100 }, { "r": 3, "d": 20 } ], "pattern": [ { "r": 0, "d": 100 }, { "r": 1, "d": 20 }, { "r": 0, "d": 100 }, { "r": 2, "d": 20 }, { "r": 0, "d": 100 }, { "r": 3, "d": 20 } ] } },
-		"dt": { "category": "Living World Season 2", "name": "Dry Top", "segments": { "1": { "name": "Crash Site" }, "2": { "name": "Sandstorm", "chatlink": "[&BIAHAAA=]" } }, "sequences": { "partial": [], "pattern": [ { "r": 1, "d": 40 }, { "r": 2, "d": 20 } ] } },
-		"vb": { "category": "Heart of Thorns", "name": "Verdant Brink", "segments": { "1": { "name": "Day: Securing Verdant Brink" }, "2": { "name": "Night: Night and the Enemy" }, "3": { "name": "Verdant Brink Night Cycle", "chatlink": "[&BAgIAAA=]" } }, "sequences": { "partial": [ { "r": 2, "d": 10 }, { "r": 3, "d": 20 } ], "pattern": [ { "r": 1, "d": 75 }, { "r": 2, "d": 25 }, { "r": 3, "d": 20 } ] } },
-		"ab": { "category": "Heart of Thorns", "name": "Auric Basin", "segments": { "1": { "name": "Pillars of Mordremoth (Octovine)", "chatlink": "[&BN0HAAA=]" }, "2": { "name": "Challenges", "chatlink": "[&BGwIAAA=]" }, "3": { "name": "Octovine", "chatlink": "[&BAIIAAA=]" }, "4": { "name": "Reset" } }, "sequences": { "partial": [ { "r": 1, "d": 45 }, { "r": 2, "d": 15 }, { "r": 3, "d": 20 }, { "r": 4, "d": 10 } ], "pattern": [ { "r": 1, "d": 75 }, { "r": 2, "d": 15 }, { "r": 3, "d": 20 }, { "r": 4, "d": 10 } ] } },
-		"td": { "category": "Heart of Thorns", "name": "Tangled Depths", "segments": { "1": { "name": "Help the Outposts" }, "2": { "name": "Prep" }, "3": { "name": "King of the Jungle (Chak Gerent)", "chatlink": "[&BPUHAAA=]" } }, "sequences": { "partial": [ { "r": 1, "d": 25 }, { "r": 2, "d": 5 }, { "r": 3, "d": 20 } ], "pattern": [ { "r": 1, "d": 95 }, { "r": 2, "d": 5 }, { "r": 3, "d": 20 } ] } },
-		"ds": { "category": "Heart of Thorns", "name": "Dragon's Stand", "segments": { "1": { "name": "Dragon's Stand (The Death of Mordremoth)", "chatlink": "[&BBAIAAA=]" }, "2": { "name": "(continued)" } }, "sequences": { "partial": [ { "r": 2, "d": 90 } ], "pattern": [ { "r": 1, "d": 120 } ] } },
-		"di": { "category": "Living World Season 4", "name": "Domain of Istan", "segments": { "0": { "name": "" }, "1": { "name": "Palawadan, Jewel of Istan", "chatlink": "[&BAkLAAA=]" } }, "sequences": { "partial": [ { "r": 1, "d": 15 } ], "pattern": [ { "r": 0, "d": 90 }, { "r": 1, "d": 30 } ] } },
-		"jb": { "category": "Living World Season 4", "name": "Jahai Bluffs", "segments": { "0": { "name": "" }, "1": { "name": "Escorts", "chatlink": "[&BIMLAAA=]" }, "2": { "name": "Death-Branded Shatterer", "chatlink": "[&BJMLAAA=]" } }, "sequences": { "partial": [ { "r": 0, "d": 60 }, { "r": 1, "d": 15 }, { "r": 2, "d": 15 } ], "pattern": [ { "r": 0, "d": 90 }, { "r": 1, "d": 15 }, { "r": 2, "d": 15 } ] } },
-		"tp": { "category": "Living World Season 4", "name": "Thunderhead Peaks", "segments": { "0": { "name": "" }, "1": { "name": "Thunderhead Keep", "chatlink": "[&BLsLAAA=]" }, "2": { "name": "The Oil Floes", "chatlink": "[&BKYLAAA=]" } }, "sequences": { "partial": [ { "r": 1, "d": 5 }, { "r": 0, "d": 40 }, { "r": 2, "d": 15 } ], "pattern": [ { "r": 0, "d": 45 }, { "r": 1, "d": 20 }, { "r": 0, "d": 40 }, { "r": 2, "d": 15 } ] } },
-		"gv": { "category": "The Icebrood Saga", "name": "Grothmar Valley", "segments": { "0": { "name": "" }, "1": { "name": "Effigy", "chatlink": "[&BA4MAAA=]" }, "2": { "name": "Doomlore Shrine", "chatlink": "[&BA4MAAA=]" }, "3": { "name": "Ooze Pits", "chatlink": "[&BPgLAAA=]" }, "4": { "name": "Metal Concert", "chatlink": "[&BPgLAAA=]" } }, "sequences": { "partial": [ { "r": 0, "d": 10 } ], "pattern": [ { "r": 1, "d": 15 }, { "r": 0, "d": 13 }, { "r": 2, "d": 22 }, { "r": 0, "d": 5 }, { "r": 3, "d": 20 }, { "r": 0, "d": 15 }, { "r": 4, "d": 15 }, { "r": 0, "d": 15 } ] } },
-		"bm": { "category": "The Icebrood Saga", "name": "Bjora Marches", "segments": { "0": { "name": "" }, "1": { "name": "Drakkar", "chatlink": "[&BDkMAAA=]" }, "2": { "name": "Storms of Winter", "chatlink": "[&BCcMAAA=]" } }, "sequences": { "partial": [], "pattern": [ { "r": 0, "d": 45 }, { "r": 1, "d": 35 }, { "r": 0, "d": 5 }, { "r": 2, "d": 35 } ] } },
-		"dsp": { "category": "The Icebrood Saga", "name": "Dragonstorm", "segments": { "0": { "name": "" }, "1": { "name": "Dragonstorm", "chatlink": "[&BAkMAAA=]" } }, "sequences": { "partial": [ { "r": 0, "d": 60 } ], "pattern": [ { "r": 1, "d": 20 }, { "r": 0, "d": 100 } ] } },
-		"sp": { "category": "End of Dragons", "name": "Seitung Province", "segments": { "0": { "name": "" }, "1": { "name": "Aetherblade Assault", "chatlink": "[&BGUNAAA=]" } }, "sequences": { "partial": [ { "r": 0, "d": 90 } ], "pattern": [ { "r": 1, "d": 30 }, { "r": 0, "d": 90 } ] } },
-		"nkc": { "category": "End of Dragons", "name": "New Kaineng City", "segments": { "0": { "name": "" }, "1": { "name": "Kaineng Blackout", "chatlink": "[&BBkNAAA=]" } }, "sequences": { "partial": [], "pattern": [ { "r": 1, "d": 40 }, { "r": 0, "d": 80 } ] } },
-		"tew": { "category": "End of Dragons", "name": "The Echovald Wilds", "segments": { "0": { "name": "" }, "1": { "name": "Gang War", "chatlink": "[&BMwMAAA=]" }, "2": { "name": "Fort Aspenwood", "chatlink": "[&BPkMAAA=]" } }, "sequences": { "partial": [], "pattern": [ { "r": 0, "d": 30 }, { "r": 1, "d": 35 }, { "r": 0, "d": 35 }, { "r": 2, "d": 20 } ] } },
-		"dre": { "category": "End of Dragons", "name": "Dragon's End", "segments": { "1": { "name": "Preparations" }, "2": { "name": "Jade Maw" }, "3": { "name": "The Battle for the Jade Sea", "chatlink": "[&BKIMAAA=]" } }, "sequences": { "partial": [], "pattern": [ { "r": 1, "d": 5 }, { "r": 2, "d": 8 }, { "r": 1, "d": 32 }, { "r": 2, "d": 8 }, { "r": 1, "d": 7 }, { "r": 3, "d": 60 } ] } }
-	}
+    "events": {
+        "wb": { "category": "Core Tyria", "name": "World bosses", "segments": { "1": { "name": "Admiral Taidha Covington", "chatlink": "[&BKgBAAA=]" }, "2": { "name": "Claw of Jormag", "chatlink": "[&BHoCAAA=]" }, "3": { "name": "Fire Elemental", "chatlink": "[&BEcAAAA=]" }, "4": { "name": "Golem Mark II", "chatlink": "[&BNQCAAA=]" }, "5": { "name": "Great Jungle Wurm", "chatlink": "[&BEEFAAA=]" }, "6": { "name": "Megadestroyer", "chatlink": "[&BM0CAAA=]" }, "7": { "name": "Modniir Ulgoth", "chatlink": "[&BLAAAAA=]" }, "8": { "name": "Shadow Behemoth", "chatlink": "[&BPcAAAA=]" }, "9": { "name": "Svanir Shaman Chief", "chatlink": "[&BMIDAAA=]" }, "10": { "name": "The Shatterer", "chatlink": "[&BE4DAAA=]" } }, "sequences": { "partial": [], "pattern": [{ "r": 1, "d": 15 }, { "r": 9, "d": 15 }, { "r": 6, "d": 15 }, { "r": 3, "d": 15 }, { "r": 10, "d": 15 }, { "r": 5, "d": 15 }, { "r": 7, "d": 15 }, { "r": 8, "d": 15 }, { "r": 4, "d": 15 }, { "r": 9, "d": 15 }, { "r": 2, "d": 15 }, { "r": 3, "d": 15 }, { "r": 1, "d": 15 }, { "r": 5, "d": 15 }, { "r": 6, "d": 15 }, { "r": 8, "d": 15 }, { "r": 10, "d": 15 }, { "r": 9, "d": 15 }, { "r": 7, "d": 15 }, { "r": 3, "d": 15 }, { "r": 4, "d": 15 }, { "r": 5, "d": 15 }, { "r": 2, "d": 15 }, { "r": 8, "d": 15 }] } },
+        "hwb": { "category": "Core Tyria", "name": "Hard world bosses", "segments": { "0": { "name": "" }, "1": { "name": "Triple Trouble", "chatlink": "[&BKoBAAA=]" }, "2": { "name": "Karka Queen", "chatlink": "[&BNUGAAA=]" }, "3": { "name": "Tequatl the Sunless", "chatlink": "[&BNABAAA=]" } }, "sequences": { "partial": [{ "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 30 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 90 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 120 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 120 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 30 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }, { "r": 0, "d": 150 }, { "r": 2, "d": 30 }, { "r": 0, "d": 30 }, { "r": 3, "d": 30 }, { "r": 0, "d": 30 }, { "r": 1, "d": 30 }], "pattern": [] } },
+        "la": { "category": "Core Tyria", "name": "Ley-Line Anomaly", "segments": { "0": { "name": "" }, "1": { "name": "Timberline Falls", "chatlink": "[&BEwCAAA=]" }, "2": { "name": "Iron Marches", "chatlink": "[&BOcBAAA=]" }, "3": { "name": "Gendarran Fields", "chatlink": "[&BOQAAAA=]" } }, "sequences": { "partial": [{ "r": 0, "d": 20 }, { "r": 1, "d": 20 }, { "r": 0, "d": 100 }, { "r": 2, "d": 20 }, { "r": 0, "d": 100 }, { "r": 3, "d": 20 }], "pattern": [{ "r": 0, "d": 100 }, { "r": 1, "d": 20 }, { "r": 0, "d": 100 }, { "r": 2, "d": 20 }, { "r": 0, "d": 100 }, { "r": 3, "d": 20 }] } },
+        "dt": { "category": "Living World Season 2", "name": "Dry Top", "segments": { "1": { "name": "Crash Site" }, "2": { "name": "Sandstorm", "chatlink": "[&BIAHAAA=]" } }, "sequences": { "partial": [], "pattern": [{ "r": 1, "d": 40 }, { "r": 2, "d": 20 }] } },
+        "vb": { "category": "Heart of Thorns", "name": "Verdant Brink", "segments": { "1": { "name": "Day: Securing Verdant Brink" }, "2": { "name": "Night: Night and the Enemy" }, "3": { "name": "Verdant Brink Night Cycle", "chatlink": "[&BAgIAAA=]" } }, "sequences": { "partial": [{ "r": 2, "d": 10 }, { "r": 3, "d": 20 }], "pattern": [{ "r": 1, "d": 75 }, { "r": 2, "d": 25 }, { "r": 3, "d": 20 }] } },
+        "ab": { "category": "Heart of Thorns", "name": "Auric Basin", "segments": { "1": { "name": "Pillars of Mordremoth (Octovine)", "chatlink": "[&BN0HAAA=]" }, "2": { "name": "Challenges", "chatlink": "[&BGwIAAA=]" }, "3": { "name": "Octovine", "chatlink": "[&BAIIAAA=]" }, "4": { "name": "Reset" } }, "sequences": { "partial": [{ "r": 1, "d": 45 }, { "r": 2, "d": 15 }, { "r": 3, "d": 20 }, { "r": 4, "d": 10 }], "pattern": [{ "r": 1, "d": 75 }, { "r": 2, "d": 15 }, { "r": 3, "d": 20 }, { "r": 4, "d": 10 }] } },
+        "td": { "category": "Heart of Thorns", "name": "Tangled Depths", "segments": { "1": { "name": "Help the Outposts" }, "2": { "name": "Prep" }, "3": { "name": "King of the Jungle (Chak Gerent)", "chatlink": "[&BPUHAAA=]" } }, "sequences": { "partial": [{ "r": 1, "d": 25 }, { "r": 2, "d": 5 }, { "r": 3, "d": 20 }], "pattern": [{ "r": 1, "d": 95 }, { "r": 2, "d": 5 }, { "r": 3, "d": 20 }] } },
+        "ds": { "category": "Heart of Thorns", "name": "Dragon's Stand", "segments": { "1": { "name": "Dragon's Stand (The Death of Mordremoth)", "chatlink": "[&BBAIAAA=]" }, "2": { "name": "(continued)" } }, "sequences": { "partial": [{ "r": 2, "d": 90 }], "pattern": [{ "r": 1, "d": 120 }] } },
+        "di": { "category": "Living World Season 4", "name": "Domain of Istan", "segments": { "0": { "name": "" }, "1": { "name": "Palawadan, Jewel of Istan", "chatlink": "[&BAkLAAA=]" } }, "sequences": { "partial": [{ "r": 1, "d": 15 }], "pattern": [{ "r": 0, "d": 90 }, { "r": 1, "d": 30 }] } },
+        "jb": { "category": "Living World Season 4", "name": "Jahai Bluffs", "segments": { "0": { "name": "" }, "1": { "name": "Escorts", "chatlink": "[&BIMLAAA=]" }, "2": { "name": "Death-Branded Shatterer", "chatlink": "[&BJMLAAA=]" } }, "sequences": { "partial": [{ "r": 0, "d": 60 }, { "r": 1, "d": 15 }, { "r": 2, "d": 15 }], "pattern": [{ "r": 0, "d": 90 }, { "r": 1, "d": 15 }, { "r": 2, "d": 15 }] } },
+        "tp": { "category": "Living World Season 4", "name": "Thunderhead Peaks", "segments": { "0": { "name": "" }, "1": { "name": "Thunderhead Keep", "chatlink": "[&BLsLAAA=]" }, "2": { "name": "The Oil Floes", "chatlink": "[&BKYLAAA=]" } }, "sequences": { "partial": [{ "r": 1, "d": 5 }, { "r": 0, "d": 40 }, { "r": 2, "d": 15 }], "pattern": [{ "r": 0, "d": 45 }, { "r": 1, "d": 20 }, { "r": 0, "d": 40 }, { "r": 2, "d": 15 }] } },
+        "gv": { "category": "The Icebrood Saga", "name": "Grothmar Valley", "segments": { "0": { "name": "" }, "1": { "name": "Effigy", "chatlink": "[&BA4MAAA=]" }, "2": { "name": "Doomlore Shrine", "chatlink": "[&BA4MAAA=]" }, "3": { "name": "Ooze Pits", "chatlink": "[&BPgLAAA=]" }, "4": { "name": "Metal Concert", "chatlink": "[&BPgLAAA=]" } }, "sequences": { "partial": [{ "r": 0, "d": 10 }], "pattern": [{ "r": 1, "d": 15 }, { "r": 0, "d": 13 }, { "r": 2, "d": 22 }, { "r": 0, "d": 5 }, { "r": 3, "d": 20 }, { "r": 0, "d": 15 }, { "r": 4, "d": 15 }, { "r": 0, "d": 15 }] } },
+        "bm": { "category": "The Icebrood Saga", "name": "Bjora Marches", "segments": { "0": { "name": "" }, "1": { "name": "Drakkar", "chatlink": "[&BDkMAAA=]" }, "2": { "name": "Storms of Winter", "chatlink": "[&BCcMAAA=]" } }, "sequences": { "partial": [], "pattern": [{ "r": 0, "d": 45 }, { "r": 1, "d": 35 }, { "r": 0, "d": 5 }, { "r": 2, "d": 35 }] } },
+        "dsp": { "category": "The Icebrood Saga", "name": "Dragonstorm", "segments": { "0": { "name": "" }, "1": { "name": "Dragonstorm", "chatlink": "[&BAkMAAA=]" } }, "sequences": { "partial": [{ "r": 0, "d": 60 }], "pattern": [{ "r": 1, "d": 20 }, { "r": 0, "d": 100 }] } },
+        "sp": { "category": "End of Dragons", "name": "Seitung Province", "segments": { "0": { "name": "" }, "1": { "name": "Aetherblade Assault", "chatlink": "[&BGUNAAA=]" } }, "sequences": { "partial": [{ "r": 0, "d": 90 }], "pattern": [{ "r": 1, "d": 30 }, { "r": 0, "d": 90 }] } },
+        "nkc": { "category": "End of Dragons", "name": "New Kaineng City", "segments": { "0": { "name": "" }, "1": { "name": "Kaineng Blackout", "chatlink": "[&BBkNAAA=]" } }, "sequences": { "partial": [], "pattern": [{ "r": 1, "d": 40 }, { "r": 0, "d": 80 }] } },
+        "tew": { "category": "End of Dragons", "name": "The Echovald Wilds", "segments": { "0": { "name": "" }, "1": { "name": "Gang War", "chatlink": "[&BMwMAAA=]" }, "2": { "name": "Fort Aspenwood", "chatlink": "[&BPkMAAA=]" } }, "sequences": { "partial": [], "pattern": [{ "r": 0, "d": 30 }, { "r": 1, "d": 35 }, { "r": 0, "d": 35 }, { "r": 2, "d": 20 }] } },
+        "dre": { "category": "End of Dragons", "name": "Dragon's End", "segments": { "1": { "name": "Preparations" }, "2": { "name": "Jade Maw" }, "3": { "name": "The Battle for the Jade Sea", "chatlink": "[&BKIMAAA=]" } }, "sequences": { "partial": [], "pattern": [{ "r": 1, "d": 5 }, { "r": 2, "d": 8 }, { "r": 1, "d": 32 }, { "r": 2, "d": 8 }, { "r": 1, "d": 7 }, { "r": 3, "d": 60 }] } }
+    }
 } as const;
 
 // --- TYPE DEFINITIONS for App State ---
@@ -64,6 +64,7 @@ type User = {
     email: string;
     settings: {
         gw2ApiKey: string;
+        fastApiBaseUrl?: string;
     };
     savedRuns: Run[];
     favorites: string[]; // Stores stableIds of favorited events
@@ -262,7 +263,7 @@ const TimelineGraph = ({ events }: { events: AppEvent[] }) => {
 
         return { sessionStart, sessionEnd, lanes: eventLanes, graphHeight: eventLanes.length * laneHeight + 20 };
     }, [events]);
-    
+
     const timeMarkers = useMemo(() => {
         const markers = [];
         const thirtyMins = 30 * 60 * 1000;
@@ -271,7 +272,7 @@ const TimelineGraph = ({ events }: { events: AppEvent[] }) => {
         let markerTime = start.getTime() - startOffset;
 
         for (let time = markerTime; time < sessionEnd; time += thirtyMins) {
-             if (time >= sessionStart) markers.push(time);
+            if (time >= sessionStart) markers.push(time);
         }
         return markers;
     }, [sessionStart, sessionEnd]);
@@ -280,22 +281,22 @@ const TimelineGraph = ({ events }: { events: AppEvent[] }) => {
     if (totalDuration <= 0) return null;
 
     const getPosition = (time: number) => ((time - sessionStart) / totalDuration) * 100;
-    
+
     const categoryColor: Record<AppEvent['category'], string> = {
         'Meta': 'from-teal-500 to-teal-600',
         'World Boss': 'from-amber-500 to-amber-600',
         'Other': 'from-sky-500 to-sky-600',
         'Filler': 'from-slate-600 to-slate-700'
     };
-    
+
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, eventName: string) => {
         setTooltip({ x: e.pageX, y: e.pageY, content: eventName });
     };
-    
+
     const nowPosition = getPosition(now);
 
     return (
-         <div className="gw2-container-border p-4 pb-12 mb-6">
+        <div className="gw2-container-border p-4 pb-12 mb-6">
             <h3 className="text-lg font-semibold text-slate-200 mb-4 text-center">Session Overview</h3>
             <div
                 ref={graphRef}
@@ -303,7 +304,7 @@ const TimelineGraph = ({ events }: { events: AppEvent[] }) => {
                 style={{ height: `${graphHeight}px` }}
                 onMouseLeave={() => setTooltip(null)}
             >
-                 {lanes.map((lane, laneIndex) => (
+                {lanes.map((lane, laneIndex) => (
                     lane.map((event) => {
                         const left = getPosition(event.startTime);
                         const width = Math.max(0, getPosition(event.startTime + event.duration * 60 * 1000) - left);
@@ -318,27 +319,27 @@ const TimelineGraph = ({ events }: { events: AppEvent[] }) => {
                         );
                     })
                 ))}
-                
+
                 {nowPosition >= 0 && nowPosition <= 100 && (
-                     <div className="absolute top-0 bottom-0 flex flex-col items-center z-20" style={{ left: `${nowPosition}%`, transform: 'translateX(-50%)' }}>
+                    <div className="absolute top-0 bottom-0 flex flex-col items-center z-20" style={{ left: `${nowPosition}%`, transform: 'translateX(-50%)' }}>
                         <div className="w-0.5 h-full bg-red-500"></div>
                         <span className="text-xs font-bold text-red-200 bg-red-800/80 px-3 py-1 rounded-full -bottom-8 absolute whitespace-nowrap animate-pulse-glow">
-                          NOW {formatTime(now, true)}
+                            NOW {formatTime(now, true)}
                         </span>
                     </div>
                 )}
             </div>
             <div className="relative h-4 mt-2 w-full border-t border-slate-700">
-                 {timeMarkers.map(time => {
+                {timeMarkers.map(time => {
                     const left = getPosition(time);
                     if (left < 0 || left > 100) return null;
                     return (
                         <div key={time} className="absolute -top-4" style={{ left: `${left}%`, transform: 'translateX(-50%)' }}>
-                           <div className="h-2 w-px bg-slate-600 absolute -top-1 left-1/2"></div>
-                           <span className="text-xs text-slate-400">{formatTime(time)}</span>
+                            <div className="h-2 w-px bg-slate-600 absolute -top-1 left-1/2"></div>
+                            <span className="text-xs text-slate-400">{formatTime(time)}</span>
                         </div>
                     )
-                 })}
+                })}
             </div>
             {tooltip && (
                 <div className="graph-tooltip" style={{ left: tooltip.x, top: tooltip.y }}>
@@ -362,7 +363,7 @@ const useUser = () => {
                 const loadedUser = JSON.parse(loggedInUser);
                 const defaultUser: User = {
                     email: '',
-                    settings: { gw2ApiKey: '' },
+                    settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8000' },
                     savedRuns: [],
                     favorites: []
                 };
@@ -391,10 +392,10 @@ const useUser = () => {
         const existingUsers = JSON.parse(localStorage.getItem('gw2commkit_users') || '{}');
         if (existingUsers[email]) {
             const loadedUser = existingUsers[email];
-            const defaultUserStructure: Partial<User> = { 
-                savedRuns: [], 
-                favorites: [], 
-                settings: { gw2ApiKey: '' } 
+            const defaultUserStructure: Partial<User> = {
+                savedRuns: [],
+                favorites: [],
+                settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8000' }
             };
             const fullUserData = { ...defaultUserStructure, ...loadedUser, email };
             localStorage.setItem('gw2commkit_user', JSON.stringify(fullUserData));
@@ -405,7 +406,7 @@ const useUser = () => {
             return;
         }
     };
-    
+
     const register = (email: string) => {
         const existingUsers = JSON.parse(localStorage.getItem('gw2commkit_users') || '{}');
         if (existingUsers[email]) {
@@ -414,7 +415,7 @@ const useUser = () => {
         }
         const newUser: User = {
             email,
-            settings: { gw2ApiKey: '' },
+            settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8000' },
             savedRuns: [],
             favorites: [],
         };
@@ -471,20 +472,20 @@ const EventItem = ({
 
     const upcomingProgress = isUpcoming ? 100 - (timeToStart / upcomingThreshold) * 100 : 0;
     const activeProgress = isActive ? 100 - (timeToEnd / (event.duration * 60)) * 100 : 0;
-    
+
     const categoryColor: Record<AppEvent['category'], string> = {
         'Meta': 'border-l-teal-400',
         'World Boss': 'border-l-amber-400',
         'Other': 'border-l-sky-400',
         'Filler': 'border-l-slate-500'
     };
-    
+
     const handleCopy = () => {
         if (event.waypoint) {
             navigator.clipboard.writeText(event.waypoint).then(() => {
-                 showToast('Waypoint copied to clipboard!');
+                showToast('Waypoint copied to clipboard!');
             }, () => {
-                 showToast('Failed to copy waypoint.');
+                showToast('Failed to copy waypoint.');
             });
         }
     };
@@ -502,12 +503,12 @@ const EventItem = ({
                         <p className={`text-sm font-semibold ${isActive ? 'text-green-400' : 'text-slate-300'}`}>{status}</p>
                         <p className="text-xl font-mono tracking-tighter">{timer}</p>
                         <div className="w-full bg-slate-600 rounded-full h-1.5 mt-1">
-                          {(isActive || isUpcoming) && (
-                            <div
-                              className={`rounded-full h-1.5 ${isActive ? 'bg-green-500' : 'bg-yellow-500'}`}
-                              style={{ width: `${isActive ? activeProgress : upcomingProgress}%` }}
-                            ></div>
-                          )}
+                            {(isActive || isUpcoming) && (
+                                <div
+                                    className={`rounded-full h-1.5 ${isActive ? 'bg-green-500' : 'bg-yellow-500'}`}
+                                    style={{ width: `${isActive ? activeProgress : upcomingProgress}%` }}
+                                ></div>
+                            )}
                         </div>
                     </div>
                     <div className="flex items-center gap-2 mt-1">
@@ -515,14 +516,14 @@ const EventItem = ({
                             <i className={`ti-star`}></i> Favorite
                         </button>
                         {showAdminControls && (
-                        <>
-                            <button onClick={() => onEdit(event)} className="action-button bg-slate-600 hover:bg-slate-500 text-slate-300">
-                                <i className="ti-pencil"></i> Edit
-                            </button>
-                            <button onClick={() => onDelete(event.id)} className="action-button bg-red-800 hover:bg-red-700 text-red-200">
-                                <i className="ti-trash"></i> Delete
-                            </button>
-                        </>
+                            <>
+                                <button onClick={() => onEdit(event)} className="action-button bg-slate-600 hover:bg-slate-500 text-slate-300">
+                                    <i className="ti-pencil"></i> Edit
+                                </button>
+                                <button onClick={() => onDelete(event.id)} className="action-button bg-red-800 hover:bg-red-700 text-red-200">
+                                    <i className="ti-trash"></i> Delete
+                                </button>
+                            </>
                         )}
                         {event.waypoint && (
                             <button onClick={handleCopy} className="action-button bg-indigo-700 hover:bg-indigo-600 text-indigo-200">
@@ -543,7 +544,7 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
     const [editingEvent, setEditingEvent] = useState<AppEvent | undefined>(undefined);
     const [filter, setFilter] = useState<FilterType>('All');
     const showToast = useToast();
-    
+
     const handleSyncTimetable = useCallback(async (selectedFilter: FilterType = 'All') => {
         setIsLoading(true);
         setFilter(selectedFilter);
@@ -552,7 +553,7 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
         setEvents(filtered);
         setIsLoading(false);
     }, [setEvents]);
-    
+
     const handleRefreshFilteredTimetable = useCallback(async () => {
         setIsLoading(true);
         const allEvents = calculateSchedule();
@@ -560,16 +561,16 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
         setEvents(filtered);
         setIsLoading(false);
     }, [filter, setEvents]);
-    
+
     const handleSaveEvent = (event: AppEvent) => {
         setEvents(prevEvents => {
             const existingIndex = prevEvents.findIndex(e => e.id === event.id);
             if (existingIndex > -1) {
                 const newEvents = [...prevEvents];
                 newEvents[existingIndex] = event;
-                return newEvents.sort((a,b) => a.startTime - b.startTime);
+                return newEvents.sort((a, b) => a.startTime - b.startTime);
             }
-            return [...prevEvents, event].sort((a,b) => a.startTime - b.startTime);
+            return [...prevEvents, event].sort((a, b) => a.startTime - b.startTime);
         });
         setEditingEvent(undefined);
     };
@@ -577,7 +578,7 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
     const handleDeleteEvent = (id: string) => {
         setEvents(prev => prev.filter(e => e.id !== id));
     };
-    
+
     const handleSaveRun = () => {
         const runName = prompt("Enter a name for this run:");
         if (runName && user) {
@@ -586,7 +587,7 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
             showToast(`Run "${runName}" saved!`);
         }
     };
-    
+
     const handleToggleFavorite = (stableId: string) => {
         if (!user) return;
         const favorites = user.favorites || [];
@@ -605,19 +606,19 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
     return (
         <div>
             {editingEvent && <EventForm event={editingEvent} onSave={handleSaveEvent} onCancel={() => setEditingEvent(undefined)} />}
-            
+
             {events.length > 0 && <TimelineGraph events={filteredEvents} />}
 
             <div className="gw2-container-border p-4 mb-4">
-                 <div className="flex flex-wrap items-center justify-between gap-4">
+                <div className="flex flex-wrap items-center justify-between gap-4">
                     <div className="flex-grow">
-                         <h3 className="text-lg font-semibold text-slate-200 mb-3">Live Timetable</h3>
+                        <h3 className="text-lg font-semibold text-slate-200 mb-3">Live Timetable</h3>
                         <div className="flex flex-wrap gap-2 items-center">
                             <button onClick={() => handleSyncTimetable('All')} className={`gw2-button text-sm ${filter === 'All' ? 'bg-indigo-500' : 'bg-slate-600'}`}>All</button>
                             <button onClick={() => setFilter('Meta')} className={`gw2-button text-sm ${filter === 'Meta' ? 'bg-indigo-500' : 'bg-slate-600'}`}>Meta</button>
                             <button onClick={() => setFilter('World Boss')} className={`gw2-button text-sm ${filter === 'World Boss' ? 'bg-indigo-500' : 'bg-slate-600'}`}>World Boss</button>
                             <button onClick={() => setFilter('Other')} className={`gw2-button text-sm ${filter === 'Other' ? 'bg-indigo-500' : 'bg-slate-600'}`}>Other</button>
-                             <button onClick={handleRefreshFilteredTimetable} className="gw2-button bg-slate-600 hover:bg-slate-500" title="Refresh filtered view">
+                            <button onClick={handleRefreshFilteredTimetable} className="gw2-button bg-slate-600 hover:bg-slate-500" title="Refresh filtered view">
                                 <i className="ti-reload"></i> Refresh
                             </button>
                         </div>
@@ -630,14 +631,14 @@ function CommanderToolkitPage({ user, updateUser, events, setEvents }: { user: U
             </div>
 
             {isLoading ? <LoadingSpinner /> : (
-                 <div className="space-y-2">
+                <div className="space-y-2">
                     {filteredEvents.map(event => (
-                        <EventItem 
-                            key={event.id} 
-                            event={event} 
+                        <EventItem
+                            key={event.id}
+                            event={event}
                             isFavorite={user.favorites?.includes(event.stableId) || false}
                             onToggleFavorite={handleToggleFavorite}
-                            onEdit={setEditingEvent} 
+                            onEdit={setEditingEvent}
                             onDelete={handleDeleteEvent}
                         />
                     ))}
@@ -656,7 +657,7 @@ function SavedRunsPage({ user, updateUser, setEvents, setActiveTab }: { user: Us
             updateUser({ ...user, savedRuns: newRuns });
         }
     };
-    
+
     const loadRun = (run: Run) => {
         setEvents(run.events);
         setActiveTab('toolkit');
@@ -690,7 +691,7 @@ function FavoritesPage({ user, onToggleFavorite }: { user: User; onToggleFavorit
     const [allFavoriteEvents, setAllFavoriteEvents] = useState<AppEvent[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [filter, setFilter] = useState<FilterType>('All');
-    
+
     const refreshFavorites = useCallback(() => {
         setIsLoading(true);
         const allEvents = calculateSchedule();
@@ -739,8 +740,8 @@ function FavoritesPage({ user, onToggleFavorite }: { user: User; onToggleFavorit
                             event={event}
                             isFavorite={true}
                             onToggleFavorite={onToggleFavorite}
-                            onEdit={() => {}}
-                            onDelete={() => {}}
+                            onEdit={() => { }}
+                            onDelete={() => { }}
                             showAdminControls={false}
                         />
                     ))}
@@ -778,7 +779,7 @@ function DailyHelpersPage() {
             // Before reset, use yesterday's waypoints
             targetDayIndex = utcDay === 0 ? 6 : utcDay - 1; // If Sunday, use Saturday's
         }
-        
+
         const waypoints = psnaData[targetDayIndex];
 
         navigator.clipboard.writeText(waypoints).then(() => {
@@ -796,7 +797,7 @@ function DailyHelpersPage() {
             showToast('Failed to copy waypoints.');
         });
     };
-    
+
     const handleCopySunkenChests = () => {
         const waypoints = "[&BAAEAAA=][&BKEAAAA=][&BCwAAAA=][&BCMAAAA=][&BOEBAAA=][&BJAAAAA=][&BOcFAAA=][&BEwGAAA=][&BD0CAAA=][&BI0GAAA=]";
         navigator.clipboard.writeText(waypoints).then(() => {
@@ -898,7 +899,7 @@ function MakeGoldPage() {
                             <div className="p-3 text-center border-b-2 border-slate-900">
                                 <h4 className="font-bold text-lg text-white">Amalgamated Gemstone</h4>
                             </div>
-                            
+
                             <div className="p-3 space-y-2 text-sm">
                                 <div className="flex justify-between">
                                     <span className="text-slate-400">Source</span>
@@ -936,7 +937,7 @@ function MakeGoldPage() {
             <div className="bg-slate-800/50 p-4 rounded-md mb-6">
                 <h3 className="text-xl font-semibold text-slate-200 mb-2">Amalgamated Gemstones (Guaranteed Recipes)</h3>
                 <p className="text-sm text-slate-400 mb-4">
-                   These recipes guarantee <span className="font-bold text-slate-300">1x Amalgamated Gemstone</span>. They require an Exotic Inscription, Globs of Ectoplasm, Piles of Crystalline Dust, and a Tier 6 fine gemstone.
+                    These recipes guarantee <span className="font-bold text-slate-300">1x Amalgamated Gemstone</span>. They require an Exotic Inscription, Globs of Ectoplasm, Piles of Crystalline Dust, and a Tier 6 fine gemstone.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -945,7 +946,7 @@ function MakeGoldPage() {
                             <div className="p-3 text-center border-b-2 border-slate-900">
                                 <h4 className="font-bold text-lg text-white">Amalgamated Gemstone</h4>
                             </div>
-                            
+
                             <div className="p-3 space-y-2 text-sm">
                                 <div className="flex justify-between">
                                     <span className="text-slate-400">Source</span>
@@ -978,7 +979,7 @@ function MakeGoldPage() {
                                         <img src={crystallineDustIcon} alt="Pile of Crystalline Dust" className="w-6 h-6 rounded-sm flex-shrink-0" referrerPolicy="no-referrer" />
                                         <span className="flex-grow">Pile of Crystalline Dust</span>
                                     </li>
-                                     <li className="flex items-center gap-3">
+                                    <li className="flex items-center gap-3">
                                         <span className="font-mono text-slate-400 w-5 text-center flex-shrink-0">1</span>
                                         <img src={recipe.icon} alt={recipe.name} className="w-6 h-6 rounded-sm flex-shrink-0" referrerPolicy="no-referrer" />
                                         <span className="flex-grow">{recipe.name}</span>
@@ -997,27 +998,27 @@ function MakeGoldPage() {
 
 // --- TYPES for Dailies Page ---
 type DailyAchievement = {
-  id: number;
-  name: string;
-  icon: string;
-  requirement: string;
+    id: number;
+    name: string;
+    icon: string;
+    requirement: string;
 };
 
 type CategorizedDailies = {
-  pve: DailyAchievement[];
-  pvp: DailyAchievement[];
-  wvw: DailyAchievement[];
-  fractals: DailyAchievement[];
-  special: DailyAchievement[];
-  lws3: DailyAchievement[];
-  lws4: DailyAchievement[];
-  icebroodSaga: DailyAchievement[];
-  endOfDragons: DailyAchievement[];
+    pve: DailyAchievement[];
+    pvp: DailyAchievement[];
+    wvw: DailyAchievement[];
+    fractals: DailyAchievement[];
+    special: DailyAchievement[];
+    lws3: DailyAchievement[];
+    lws4: DailyAchievement[];
+    icebroodSaga: DailyAchievement[];
+    endOfDragons: DailyAchievement[];
 };
 
 type GW2AccountAchievement = {
-  id: number;
-  done: boolean;
+    id: number;
+    done: boolean;
 };
 
 type GW2DailyInfo = {
@@ -1028,10 +1029,10 @@ type GW2DailyInfo = {
 type GW2DailyApiResponse = Record<string, GW2DailyInfo[]>;
 
 type WizardsVaultObjectiveProgress = {
-  id: number;
-  progress_current: number;
-  progress_complete: number;
-  claimed: boolean;
+    id: number;
+    progress_current: number;
+    progress_complete: number;
+    claimed: boolean;
 };
 
 // The API returns an object with an 'objectives' key
@@ -1040,23 +1041,23 @@ type WizardsVaultApiResponse = {
 }
 
 type WizardsVaultObjectiveDetails = {
-  id: number;
-  title: string;
-  reward_id: number;
+    id: number;
+    title: string;
+    reward_id: number;
 };
 
 type WizardsVaultReward = {
-  id: number;
-  count: number;
+    id: number;
+    count: number;
 };
 
 type MergedWizardsVaultObjective = {
-  id: number;
-  title: string;
-  progress_current: number;
-  progress_complete: number;
-  claimed: boolean;
-  astral_acclaim: number;
+    id: number;
+    title: string;
+    progress_current: number;
+    progress_complete: number;
+    claimed: boolean;
+    astral_acclaim: number;
 };
 
 
@@ -1079,28 +1080,28 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
         const standardDailiesPromise = (async () => {
             const dailyRes = await fetch("https://api.guildwars2.com/v2/achievements/daily");
             if (!dailyRes.ok) throw new Error(`Standard Dailies API failed with status ${dailyRes.status}`);
-            
+
             const dailyData: GW2DailyApiResponse = await dailyRes.json();
             const allIds = Object.values(dailyData).flat().map(entry => entry.id);
             if (allIds.length === 0) return { pve: [], pvp: [], wvw: [], fractals: [], special: [], lws3: [], lws4: [], icebroodSaga: [], endOfDragons: [] };
 
             const achievementsRes = await fetch(`https://api.guildwars2.com/v2/achievements?ids=${allIds.join(",")}`);
             if (!achievementsRes.ok) throw new Error(`Failed to fetch achievement details`);
-            
+
             const achievementsData: DailyAchievement[] = await achievementsRes.json();
             const achievementsMap = new Map(achievementsData.map((a) => [a.id, a]));
-            
+
             const categorized: CategorizedDailies = { pve: [], pvp: [], wvw: [], fractals: [], special: [], lws3: [], lws4: [], icebroodSaga: [], endOfDragons: [] };
-            
+
             for (const categoryKey of ['pvp', 'wvw', 'fractals', 'special']) {
                 const key = categoryKey as keyof GW2DailyApiResponse & keyof CategorizedDailies;
                 if (dailyData[key]) {
-                     categorized[key] = dailyData[key]
+                    categorized[key] = dailyData[key]
                         .map(daily => achievementsMap.get(daily.id))
                         .filter((a): a is DailyAchievement => !!a);
                 }
             }
-            
+
             const pveAchievements = dailyData.pve?.map(d => achievementsMap.get(d.id)).filter((a): a is DailyAchievement => !!a) || [];
             for (const ach of pveAchievements) {
                 const name = ach.name.toLowerCase();
@@ -1120,9 +1121,9 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
 
             const completedPromise = fetch(`https://api.guildwars2.com/v2/account/achievements?access_token=${apiKey}`).then(res => res.ok ? res.json() : Promise.reject("Account completion fetch failed"));
             const vaultProgressPromise = fetch(`https://api.guildwars2.com/v2/account/wizardsvault/daily?access_token=${apiKey}`).then(res => res.ok ? res.json() : Promise.reject("Wizard's Vault progress fetch failed"));
-            
+
             const [completedRes, vaultProgressRes] = await Promise.allSettled([completedPromise, vaultProgressPromise]);
-            
+
             const completed = completedRes.status === 'fulfilled' ? new Set((completedRes.value as GW2AccountAchievement[]).filter(a => a.done).map(a => a.id)) : new Set<number>();
 
             const vaultApiResponse = vaultProgressRes.status === 'fulfilled' ? (vaultProgressRes.value as WizardsVaultApiResponse) : null;
@@ -1131,18 +1132,18 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
             if (vaultObjectives.length === 0) {
                 return { completed, vault: [] };
             }
-            
+
             const objectiveIds = vaultObjectives.map(o => o.id).join(',');
             const detailsRes = await fetch(`https://api.guildwars2.com/v2/wizardsvault/objectives?ids=${objectiveIds}`);
             if (!detailsRes.ok) return { completed, vault: [] };
-            
+
             const detailsData: WizardsVaultObjectiveDetails[] = await detailsRes.json();
             const detailsMap = new Map(detailsData.map(d => [d.id, d]));
-            
+
             const rewardIds = [...new Set(detailsData.map(d => d.reward_id))].join(',');
             const rewardsRes = await fetch(`https://api.guildwars2.com/v2/wizardsvault/rewards?ids=${rewardIds}`);
             if (!rewardsRes.ok) return { completed, vault: [] };
-            
+
             const rewardsData: WizardsVaultReward[] = await rewardsRes.json();
             const rewardsMap = new Map(rewardsData.map(r => [r.id, r]));
 
@@ -1155,12 +1156,12 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
                     astral_acclaim: reward?.count || 0,
                 };
             });
-            
+
             return { completed, vault };
         })();
-        
+
         const [dailiesResult, accountResult] = await Promise.allSettled([standardDailiesPromise, accountDataPromise]);
-        
+
         if (dailiesResult.status === 'fulfilled') {
             setDailies(dailiesResult.value);
         } else {
@@ -1177,10 +1178,10 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
             setCompletedAchievements(accountResult.value.completed);
             setWizardsVaultDailies(accountResult.value.vault);
         } else {
-             console.error("Account Data Error:", accountResult.reason);
-             if (apiKey) toastMessage = "Failed to load account data. API key might be invalid or miss permissions.";
+            console.error("Account Data Error:", accountResult.reason);
+            if (apiKey) toastMessage = "Failed to load account data. API key might be invalid or miss permissions.";
         }
-        
+
         showToast(toastMessage);
         setLoading(false);
     }, [apiKey, showToast]);
@@ -1220,7 +1221,7 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
     const renderWizardsVault = () => {
         if (!apiKey || wizardsVaultDailies.length === 0) return null;
         return (
-             <div className="bg-slate-700/50 p-4 rounded-md mb-6">
+            <div className="bg-slate-700/50 p-4 rounded-md mb-6">
                 <h3 className="text-lg font-semibold text-slate-200 mb-4">Wizard's Vault Dailies</h3>
                 <ul className="space-y-3">
                     {wizardsVaultDailies.map(obj => {
@@ -1229,16 +1230,16 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
                             <li key={obj.id} className="flex items-center gap-4 p-3 bg-slate-800/60 rounded-md">
                                 <div className="flex-grow">
                                     <div className="flex justify-between items-baseline mb-1">
-                                         <p className="font-semibold text-white">{obj.title}</p>
-                                         <div className="flex items-center gap-1.5 font-bold text-cyan-300">
+                                        <p className="font-semibold text-white">{obj.title}</p>
+                                        <div className="flex items-center gap-1.5 font-bold text-cyan-300">
                                             {obj.astral_acclaim}
                                             <img src="https://wiki.guildwars2.com/images/thumb/7/77/Astral_Acclaim.png/20px-Astral_Acclaim.png" alt="AA" className="w-4 h-4" />
-                                         </div>
+                                        </div>
                                     </div>
                                     <div className="w-full bg-slate-600 rounded-full h-2.5">
                                         <div className="bg-cyan-500 h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
                                     </div>
-                                     <p className="text-xs text-slate-400 mt-1 text-right">{obj.progress_current} / {obj.progress_complete}</p>
+                                    <p className="text-xs text-slate-400 mt-1 text-right">{obj.progress_current} / {obj.progress_complete}</p>
                                 </div>
                                 {obj.claimed || obj.progress_current >= obj.progress_complete ? (
                                     <span className="text-sm font-bold text-green-400 flex items-center gap-1.5"><i className="ti-check"></i>Completed</span>
@@ -1261,9 +1262,9 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
                     <i className={`ti-reload ${loading ? 'animate-spin' : ''} mr-2`}></i> Refresh Dailies
                 </button>
             </div>
-            
+
             {!apiKey && (
-                 <div className="bg-yellow-900/50 border border-yellow-700 text-yellow-200 p-4 rounded-md mb-6 flex flex-wrap items-center justify-between gap-4">
+                <div className="bg-yellow-900/50 border border-yellow-700 text-yellow-200 p-4 rounded-md mb-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <p className="font-bold">Add your API key for completion tracking.</p>
                         <p className="text-sm">The key needs the `progression` and `account` permissions.</p>
@@ -1288,7 +1289,7 @@ function DailiesPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: A
                             {renderCategory("Special Dailies", dailies.special)}
                         </>
                     ) : (
-                         !loading && <p className="text-center text-slate-400 py-8">Could not load standard dailies. The API might be temporarily unavailable.</p>
+                        !loading && <p className="text-center text-slate-400 py-8">Could not load standard dailies. The API might be temporarily unavailable.</p>
                     )}
                 </>
             )}
@@ -1353,9 +1354,9 @@ function AccountDetailsPage({ user, setActiveTab }: { user: User; setActiveTab: 
             const lockedDyeIds = allDyeIds.filter(id => !unlockedIdsSet.has(id));
 
             if (lockedDyeIds.length === 0) {
-                 showToast("Congratulations! You have unlocked all dyes.");
-                 setIsLoading(false);
-                 return;
+                showToast("Congratulations! You have unlocked all dyes.");
+                setIsLoading(false);
+                return;
             }
 
             // Step 4: Fetch locked dye details in chunks of 200
@@ -1372,15 +1373,15 @@ function AccountDetailsPage({ user, setActiveTab }: { user: User; setActiveTab: 
                 }
             }
 
-            allLockedDyeDetails.sort((a,b) => a.name.localeCompare(b.name));
+            allLockedDyeDetails.sort((a, b) => a.name.localeCompare(b.name));
             setDyes(allLockedDyeDetails);
             showToast(`Found ${allLockedDyeDetails.length} locked dyes.`);
 
         } catch (err) {
-             console.error("Error fetching dyes:", err);
-             showToast(err instanceof Error ? err.message : "An unknown error occurred.");
+            console.error("Error fetching dyes:", err);
+            showToast(err instanceof Error ? err.message : "An unknown error occurred.");
         } finally {
-             setIsLoading(false);
+            setIsLoading(false);
         }
     };
 
@@ -1397,7 +1398,7 @@ function AccountDetailsPage({ user, setActiveTab }: { user: User; setActiveTab: 
             <h2 className="text-2xl font-bold mb-4">Account Details</h2>
 
             {!apiKey && (
-                 <div className="bg-yellow-900/50 border border-yellow-700 text-yellow-200 p-4 rounded-md mb-6 flex flex-wrap items-center justify-between gap-4">
+                <div className="bg-yellow-900/50 border border-yellow-700 text-yellow-200 p-4 rounded-md mb-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <p className="font-bold">Add your API key to view account details.</p>
                         <p className="text-sm">The key needs `account` and `unlocks` permissions.</p>
@@ -1405,7 +1406,7 @@ function AccountDetailsPage({ user, setActiveTab }: { user: User; setActiveTab: 
                     <button onClick={() => setActiveTab('settings')} className="gw2-button bg-yellow-600 hover:bg-yellow-500">Go to Settings</button>
                 </div>
             )}
-            
+
             <div className="bg-slate-700/50 p-4 rounded-md">
                 <h3 className="text-lg font-semibold text-slate-200">Locked Dyes</h3>
                 <p className="text-slate-400 mt-1 mb-4">
@@ -1455,24 +1456,36 @@ function AccountDetailsPage({ user, setActiveTab }: { user: User; setActiveTab: 
 
 function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (tab: AppTab) => void }) {
     const [endpoint, setEndpoint] = useState('/v2/account');
+    const [apiProvider, setApiProvider] = useState<'gw2' | 'fastapi'>('gw2');
     const [response, setResponse] = useState('');
     const [status, setStatus] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [showNetworkErrorHelp, setShowNetworkErrorHelp] = useState(false);
     const showToast = useToast();
     const apiKey = user.settings.gw2ApiKey;
+    const fastApiBaseUrl = user.settings.fastApiBaseUrl || 'http://localhost:8000';
 
-    const popularEndpoints = [
-        { label: 'Account Info', value: '/v2/account' },
-        { label: 'Account Wallet', value: '/v2/account/wallet' },
-        { label: 'Account Achievements', value: '/v2/account/achievements' },
-        { label: 'Characters List', value: '/v2/characters' },
-        { label: 'Character Core (edit name)', value: '/v2/characters/YourCharacterName/core' },
-        { label: 'Trading Post Prices (Ecto)', value: '/v2/commerce/prices?ids=19721' },
-        { label: 'Item Details (Ecto)', value: '/v2/items/19721' },
-        { label: 'Current Game Build', value: '/v2/build' },
-        { label: 'All World IDs', value: '/v2/worlds' },
-    ];
+    const popularEndpoints = useMemo(() => {
+        if (apiProvider === 'fastapi') {
+            return [
+                { label: 'Operational Check', value: '/v1/' },
+            ];
+        }
+        return [
+            { label: 'Account Info', value: '/v2/account' },
+            { label: 'Account Wallet', value: '/v2/account/wallet' },
+            { label: 'Account Achievements', value: '/v2/account/achievements' },
+            { label: 'Characters List', value: '/v2/characters' },
+            { label: 'Character Core (edit name)', value: '/v2/characters/YourCharacterName/core' },
+            { label: 'Trading Post Prices (Ecto)', value: '/v2/commerce/prices?ids=19721' },
+            { label: 'Item Details (Ecto)', value: '/v2/items/19721' },
+            { label: 'Commerce Listings', value: '/v2/commerce/listings' },
+            { label: 'Currencies', value: '/v2/currencies' },
+            { label: 'Gem Exchange', value: '/v2/commerce/exchange/gems?quantity=1000' },
+            { label: 'Current Game Build', value: '/v2/build' },
+            { label: 'All World IDs', value: '/v2/worlds' },
+        ];
+    }, [apiProvider]);
 
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value;
@@ -1482,11 +1495,6 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
     };
 
     const handleSendRequest = async () => {
-        if (!endpoint || !endpoint.startsWith('/v2/')) {
-            showToast("Invalid endpoint. It must start with /v2/");
-            return;
-        }
-
         setIsLoading(true);
         setResponse('');
         setStatus('');
@@ -1494,21 +1502,34 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
 
         const isProtected = endpoint.startsWith('/v2/account') || endpoint.startsWith('/v2/characters') || endpoint.startsWith('/v2/guild') || endpoint.startsWith('/v2/commerce/transactions');
 
-        if (isProtected && !apiKey) {
+        if (apiProvider === 'gw2' && isProtected && !apiKey) {
             showToast("This endpoint requires an API key. Please add one in Settings.");
             setIsLoading(false);
             setStatus('Error: API Key Required');
             return;
         }
 
+        let url = '';
+        if (apiProvider === 'gw2') {
+            if (!endpoint.startsWith('/v2/')) {
+                showToast("Invalid GW2 endpoint. It must start with /v2/");
+                setIsLoading(false);
+                return;
+            }
+            url = `https://api.guildwars2.com${endpoint}`;
+        } else {
+            // FastAPI
+            url = `${fastApiBaseUrl}${endpoint.startsWith('/') ? endpoint : '/' + endpoint}`;
+        }
+
         try {
             const headers: HeadersInit = {};
-            if (isProtected && apiKey) {
+            if (apiProvider === 'gw2' && isProtected && apiKey) {
                 headers['Authorization'] = `Bearer ${apiKey}`;
             }
 
-            const res = await fetch(`https://api.guildwars2.com${endpoint}`, { headers });
-            
+            const res = await fetch(url, { headers });
+
             setStatus(`Status: ${res.status} ${res.statusText}`);
             const responseText = await res.text();
             try {
@@ -1539,7 +1560,7 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
         <div className="gw2-container-border p-6">
             <h2 className="text-2xl font-bold mb-4">API Explorer</h2>
 
-            {!apiKey && (
+            {!apiKey && apiProvider === 'gw2' && (
                 <div className="bg-yellow-900/50 border border-yellow-700 text-yellow-200 p-4 rounded-md mb-6 flex flex-wrap items-center justify-between gap-4">
                     <div>
                         <p className="font-bold">Add your API key to use authenticated endpoints.</p>
@@ -1551,8 +1572,26 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
 
             <div className="space-y-4">
                 <div>
+                    <label className="block text-sm font-medium text-slate-300 mb-1">API Provider</label>
+                    <div className="flex bg-slate-700 rounded-md p-1 gap-1">
+                        <button
+                            onClick={() => { setApiProvider('gw2'); setEndpoint('/v2/account'); }}
+                            className={`flex-1 py-1 rounded-sm text-sm font-medium transition-colors ${apiProvider === 'gw2' ? 'bg-indigo-600 text-white shadow' : 'text-slate-400 hover:text-white'}`}
+                        >
+                            Official GW2 API
+                        </button>
+                        <button
+                            onClick={() => { setApiProvider('fastapi'); setEndpoint('/v1/'); }}
+                            className={`flex-1 py-1 rounded-sm text-sm font-medium transition-colors ${apiProvider === 'fastapi' ? 'bg-cyan-600 text-white shadow' : 'text-slate-400 hover:text-white'}`}
+                        >
+                            Fast-API (Local)
+                        </button>
+                    </div>
+                </div>
+
+                <div>
                     <label htmlFor="endpoint-select" className="block text-sm font-medium text-slate-300 mb-1">Popular Endpoints</label>
-                    <select 
+                    <select
                         id="endpoint-select"
                         onChange={handleSelectChange}
                         className="w-full p-2 bg-slate-700 rounded-md text-slate-200 mb-2"
@@ -1568,14 +1607,16 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
                 <div>
                     <label htmlFor="endpoint-input" className="block text-sm font-medium text-slate-300 mb-1">Request URL</label>
                     <div className="flex gap-2">
-                        <span className="flex items-center px-3 bg-slate-700 border border-slate-600 rounded-l-md text-slate-400">https://api.guildwars2.com</span>
-                        <input 
+                        <span className="flex items-center px-3 bg-slate-700 border border-slate-600 rounded-l-md text-slate-400 font-mono text-sm whitespace-nowrap overflow-hidden text-ellipsis max-w-[200px]">
+                            {apiProvider === 'gw2' ? 'https://api.guildwars2.com' : fastApiBaseUrl}
+                        </span>
+                        <input
                             id="endpoint-input"
                             type="text"
                             value={endpoint}
                             onChange={e => setEndpoint(e.target.value)}
                             className="w-full p-2 bg-slate-900 rounded-r-md text-slate-200 font-mono"
-                            placeholder="/v2/..."
+                            placeholder={apiProvider === 'gw2' ? "/v2/..." : "/..."}
                         />
                     </div>
                 </div>
@@ -1602,19 +1643,13 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
                         </p>
                         <ul className="list-disc list-inside space-y-2 text-sm text-amber-200">
                             <li>
-                                <span className="font-semibold">Browser Extensions:</span> Ad-blockers (like uBlock Origin) or privacy extensions can block API requests.
-                                <br />
-                                <span className="pl-4 text-amber-300/80">↳ Solution: Try temporarily disabling these extensions for this site and send the request again.</span>
-                            </li>
-                             <li>
-                                <span className="font-semibold">CORS Policy:</span> This is a browser security feature. It's often triggered by the extensions mentioned above.
-                                <br />
-                                <span className="pl-4 text-amber-300/80">↳ Solution: If disabling extensions doesn't work, consider trying a different browser.</span>
+                                <span className="font-semibold">Mixed Content / Localhost:</span> If using Fast-API, ensure your browser allows requests to `http` (localhost) from an `https` / unknown origin, or that CORS is enabled on your Python server.
                             </li>
                             <li>
-                                <span className="font-semibold">Network/Firewall:</span> A corporate firewall, proxy, or local security software might be blocking access to <code className="text-xs bg-slate-900 p-1 rounded">api.guildwars2.com</code>.
-                                 <br />
-                                <span className="pl-4 text-amber-300/80">↳ Solution: Check your network settings or try from a different network (e.g., a mobile hotspot).</span>
+                                <span className="font-semibold">Browser Extensions:</span> Ad-blockers or privacy extensions can block API requests.
+                            </li>
+                            <li>
+                                <span className="font-semibold">CORS Policy:</span> The server must allow cross-origin requests.
                             </li>
                         </ul>
                     </div>
@@ -1627,13 +1662,15 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
 
 function SettingsPage({ user, updateUser, onLogout }: { user: User, updateUser: (u: User) => void, onLogout: () => void }) {
     const [gw2ApiKey, setGw2ApiKey] = useState(user.settings.gw2ApiKey || '');
+    const [fastApiBaseUrl, setFastApiBaseUrl] = useState(user.settings.fastApiBaseUrl || 'http://localhost:8000');
     const showToast = useToast();
 
     const handleSave = () => {
         updateUser({
             ...user,
-            settings: { 
-                gw2ApiKey: gw2ApiKey
+            settings: {
+                gw2ApiKey: gw2ApiKey,
+                fastApiBaseUrl: fastApiBaseUrl
             }
         });
         showToast('Settings saved!');
@@ -1648,7 +1685,14 @@ function SettingsPage({ user, updateUser, onLogout }: { user: User, updateUser: 
                     <input id="gw2-key" type="password" value={gw2ApiKey} onChange={e => setGw2ApiKey(e.target.value)} className="w-full p-2 bg-slate-700 rounded-md text-slate-200" placeholder="Enter your GW2 API Key" />
                     <p className="text-sm text-slate-400 mt-2">Used for tracking daily achievements and account details. Requires `account`, `progression`, and `unlocks` permissions.</p>
                 </div>
-                 <div className="flex justify-between items-center pt-4">
+
+                <div className="pt-4 border-t border-slate-700">
+                    <label htmlFor="fast-api-url" className="block text-lg font-medium text-slate-300 mb-2">Fast-API Base URL</label>
+                    <input id="fast-api-url" type="text" value={fastApiBaseUrl} onChange={e => setFastApiBaseUrl(e.target.value)} className="w-full p-2 bg-slate-700 rounded-md text-slate-200" placeholder="http://localhost:8000" />
+                    <p className="text-sm text-slate-400 mt-2">URL for your local Fast-API backend service. Used in API Explorer.</p>
+                </div>
+
+                <div className="flex justify-between items-center pt-8">
                     <button onClick={onLogout} className="gw2-button bg-red-800 hover:bg-red-700">Logout</button>
                     <button onClick={handleSave} className="gw2-button">Save Settings</button>
                 </div>
@@ -1669,20 +1713,20 @@ function AuthPage({ onLogin, onRegister }: { onLogin: (email: string) => void, o
             onLogin(email);
         }
     };
-    
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
             <div className="gw2-container-border p-8 rounded-lg shadow-lg w-full max-w-sm">
                 <h1 className="text-3xl font-bold text-center text-white mb-2">GW2 CommKit</h1>
                 <p className="text-center text-slate-400 mb-6">{isRegister ? "Create a new local profile" : "Log in to your profile"}</p>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                    <input 
-                        type="email" 
+                    <input
+                        type="email"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
-                        placeholder="Enter your email" 
-                        className="w-full p-3 bg-slate-700 rounded-md text-slate-200" 
-                        required 
+                        placeholder="Enter your email"
+                        className="w-full p-3 bg-slate-700 rounded-md text-slate-200"
+                        required
                     />
                     <button type="submit" className="gw2-button w-full !py-3">{isRegister ? 'Register' : 'Login'}</button>
                 </form>
@@ -1691,7 +1735,7 @@ function AuthPage({ onLogin, onRegister }: { onLogin: (email: string) => void, o
                         {isRegister ? "Already have a profile? Log in." : "Don't have a profile? Register."}
                     </button>
                 </div>
-                 <p className="text-xs text-slate-500 text-center mt-6">Your profile is stored locally in your browser and is not sent to any server.</p>
+                <p className="text-xs text-slate-500 text-center mt-6">Your profile is stored locally in your browser and is not sent to any server.</p>
             </div>
         </div>
     );
@@ -1705,7 +1749,7 @@ const calculateSchedule = (lookaheadHours = 6): AppEvent[] => {
 
     for (const key in GW2_NINJA_TIMER_DATA.events) {
         const timer: EventTimerInfo = GW2_NINJA_TIMER_DATA.events[key as keyof typeof GW2_NINJA_TIMER_DATA.events];
-        
+
         let partial_duration_m = 0;
         for (const item of timer.sequences.partial) {
             partial_duration_m += item.d;
@@ -1723,7 +1767,7 @@ const calculateSchedule = (lookaheadHours = 6): AppEvent[] => {
         for (const item of timer.sequences.partial) {
             const segment = (timer.segments as Record<string, Segment>)[item.r.toString()];
             if (segment && segment.name) {
-                 allEvents.push({
+                allEvents.push({
                     id: `${key}_${item.r}_${base_time_ms}`,
                     stableId: `${key}_${item.r}`,
                     name: segment.name,
@@ -1741,14 +1785,14 @@ const calculateSchedule = (lookaheadHours = 6): AppEvent[] => {
             const pattern_duration_ms = pattern_duration_m * 60 * 1000;
             const time_since_base_ms = now_ms - base_time_ms;
             const patterns_passed = Math.floor(time_since_base_ms / pattern_duration_ms);
-            
+
             let current_cycle_start_ms = base_time_ms + (patterns_passed * pattern_duration_ms);
 
             for (let i = 0; i < 3; i++) { // Project 3 cycles to be safe
                 for (const item of timer.sequences.pattern) {
-                     const segment = (timer.segments as Record<string, Segment>)[item.r.toString()];
-                     if (segment && segment.name) {
-                         allEvents.push({
+                    const segment = (timer.segments as Record<string, Segment>)[item.r.toString()];
+                    if (segment && segment.name) {
+                        allEvents.push({
                             id: `${key}_${item.r}_${current_cycle_start_ms}`,
                             stableId: `${key}_${item.r}`,
                             name: segment.name,
@@ -1758,8 +1802,8 @@ const calculateSchedule = (lookaheadHours = 6): AppEvent[] => {
                             duration: item.d,
                             waypoint: segment.chatlink || '',
                         });
-                     }
-                     current_cycle_start_ms += item.d * 60 * 1000;
+                    }
+                    current_cycle_start_ms += item.d * 60 * 1000;
                 }
             }
         }
@@ -1775,7 +1819,7 @@ function App() {
     const { user, updateUser, logout } = useUser();
     const [activeTab, setActiveTab] = useState<AppTab>('toolkit');
     const [events, setEvents] = useState<AppEvent[]>([]);
-    
+
     if (!user) return <LoadingSpinner />;
 
     const handleToggleFavorite = (stableId: string) => {
@@ -1801,24 +1845,24 @@ function App() {
             default: return <CommanderToolkitPage user={user} updateUser={updateUser} events={events} setEvents={setEvents} />;
         }
     };
-    
+
     const navItemClass = (tab: AppTab) => `px-4 py-2 font-semibold rounded-md transition-colors ${activeTab === tab ? 'bg-indigo-600 text-white' : 'text-slate-300 hover:bg-slate-700'}`;
 
     return (
         <div className="max-w-7xl mx-auto p-4">
             <header className="mb-6 flex flex-wrap justify-between items-center gap-4">
-                 <h1 className="text-2xl font-bold text-white">GW2 Commander's Toolkit</h1>
-                 <nav className="gw2-container-border p-1 rounded-lg flex flex-wrap gap-1">
-                     <button onClick={() => setActiveTab('toolkit')} className={navItemClass('toolkit')}><i className="ti-crown mr-2"></i>Toolkit</button>
-                     <button onClick={() => setActiveTab('savedRuns')} className={navItemClass('savedRuns')}><i className="ti-save mr-2"></i>Runs</button>
-                     <button onClick={() => setActiveTab('favorites')} className={navItemClass('favorites')}><i className="ti-star mr-2"></i>Favorites</button>
-                     <button onClick={() => setActiveTab('dailyHelpers')} className={navItemClass('dailyHelpers')}><i className="ti-medall mr-2"></i>Helpers</button>
-                     <button onClick={() => setActiveTab('dailies')} className={navItemClass('dailies')}><i className="ti-check-box mr-2"></i>Dailies</button>
-                     <button onClick={() => setActiveTab('makeGold')} className={navItemClass('makeGold')}><i className="ti-money mr-2"></i>Make Gold</button>
-                     <button onClick={() => setActiveTab('account')} className={navItemClass('account')}><i className="ti-user mr-2"></i>Account</button>
-                     <button onClick={() => setActiveTab('apiExplorer')} className={navItemClass('apiExplorer')}><i className="ti-plug mr-2"></i>API Explorer</button>
-                     <button onClick={() => setActiveTab('settings')} className={navItemClass('settings')}><i className="ti-settings mr-2"></i>Settings</button>
-                 </nav>
+                <h1 className="text-2xl font-bold text-white">GW2 Commander's Toolkit</h1>
+                <nav className="gw2-container-border p-1 rounded-lg flex flex-wrap gap-1">
+                    <button onClick={() => setActiveTab('toolkit')} className={navItemClass('toolkit')}><i className="ti-crown mr-2"></i>Toolkit</button>
+                    <button onClick={() => setActiveTab('savedRuns')} className={navItemClass('savedRuns')}><i className="ti-save mr-2"></i>Runs</button>
+                    <button onClick={() => setActiveTab('favorites')} className={navItemClass('favorites')}><i className="ti-star mr-2"></i>Favorites</button>
+                    <button onClick={() => setActiveTab('dailyHelpers')} className={navItemClass('dailyHelpers')}><i className="ti-medall mr-2"></i>Helpers</button>
+                    <button onClick={() => setActiveTab('dailies')} className={navItemClass('dailies')}><i className="ti-check-box mr-2"></i>Dailies</button>
+                    <button onClick={() => setActiveTab('makeGold')} className={navItemClass('makeGold')}><i className="ti-money mr-2"></i>Make Gold</button>
+                    <button onClick={() => setActiveTab('account')} className={navItemClass('account')}><i className="ti-user mr-2"></i>Account</button>
+                    <button onClick={() => setActiveTab('apiExplorer')} className={navItemClass('apiExplorer')}><i className="ti-plug mr-2"></i>API Explorer</button>
+                    <button onClick={() => setActiveTab('settings')} className={navItemClass('settings')}><i className="ti-settings mr-2"></i>Settings</button>
+                </nav>
             </header>
             <main>
                 {renderTab()}
@@ -1835,11 +1879,11 @@ function AppContainer() {
         setToast(message);
         setTimeout(() => setToast(null), 3500); // 3s display, 0.5s fade-out
     }, []);
-    
+
     if (appState === 'auth') {
         return <AuthPage onLogin={login} onRegister={register} />;
     }
-    
+
     if (appState === 'app' && user) {
         return (
             <ToastContext.Provider value={showToast}>
@@ -1852,7 +1896,7 @@ function AppContainer() {
             </ToastContext.Provider>
         );
     }
-    
+
     return <LoadingSpinner />;
 }
 

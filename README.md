@@ -2,8 +2,7 @@
 
 GW2 CommKit is an advanced, web-based toolkit for Guild Wars 2 commanders and players. It leverages the power of the Google Gemini API to generate optimized meta-event schedules ("trains") and provides a real-time, interactive timetable for all major in-game events.
 
- 
-*(Image placeholder: A screenshot of the main toolkit page showing the timeline graph and the event list would be ideal here.)*
+> Image placeholder: A screenshot of the main toolkit page showing the timeline graph and the event list would be ideal here.
 
 ---
 
@@ -12,17 +11,17 @@ GW2 CommKit is an advanced, web-based toolkit for Guild Wars 2 commanders and pl
 - **🤖 AI-Powered Run Generation**: Instantly create optimized 4-hour meta-event schedules using the Google Gemini API. Choose from different "train" types (morning, evening, etc.) to get a run tailored to your play schedule.
 - **⏰ Live Timetable Sync**: Pull a real-time schedule of all upcoming world bosses, Heart of Thorns metas, and other major events based on the reliable `gw2.ninja` timer data.
 - **📊 Interactive Timeline Graph**: Get a visual overview of your entire session. The graph shows all events laid out chronologically, with a "NOW" marker indicating the current time.
-- ** event list**: View upcoming events in a clean list, grouped by category. Each event shows:
-    - A countdown timer to its start.
-    - An "Active for" timer and progress bar when it's live.
-    - An upcoming event progress bar indicating when it's about to start (within 15 mins).
-    - A one-click button to copy the waypoint chat link.
+- **Event List**: View upcoming events in a clean list, grouped by category. Each event shows:
+  - A countdown timer to its start.
+  - An "Active for" timer and progress bar when it's live.
+  - An upcoming event progress bar indicating when it's about to start (within 15 mins).
+  - A one-click button to copy the waypoint chat link.
 - **✏️ Full Schedule Customization**: Take control of your run. You can add custom events, edit existing ones, or delete any event from the schedule.
 - **💾 Save & Load Runs**: Save your favorite generated or customized runs to your local profile. Load them anytime to get right back into the action.
 - **❤️ Favorite Events**: Mark any event as a favorite. The "Favorites" tab will then show you a personalized schedule of only the upcoming instances of your chosen events.
-- **⚙️ Settings & API Flexibility**: 
-    - A simple, email-based user profile system stored locally.
-    - Flexibility to switch between Google Gemini and OpenAI for AI generation.
+- **⚙️ Settings & API Flexibility**:
+  - A simple, email-based user profile system stored locally.
+  - Flexibility to switch between Google Gemini and OpenAI for AI generation.
 - **📱 Modern, Responsive UI**: Built with React and Tailwind CSS for a clean, intuitive, and responsive experience on any device.
 
 ---
@@ -49,9 +48,10 @@ The prompt specifies the exact start time and desired JSON output format, ensuri
 
 ### 2. Live Timetable Sync
 
-The "Pull Live Data" feature uses a large, built-in data object (`GW2_NINJA_TIMER_DATA`) that contains the sequences and durations for all major repeatable events in the game. 
+The "Pull Live Data" feature uses a large, built-in data object (`GW2_NINJA_TIMER_DATA`) that contains the sequences and durations for all major repeatable events in the game.
 
 The `calculateSchedule` function processes this data in real-time:
+
 1. It determines the start of the current UTC day.
 2. It calculates the base start time for each event's pattern by accounting for any partial, non-repeating sequences.
 3. It projects the repeating pattern forward in time from this base.
@@ -66,6 +66,7 @@ This ensures the app is always in sync with the official in-game event cycles wi
 This is a frontend-only application that runs entirely in your browser.
 
 ### User Profile
+
 - The first time you open the app, you will be asked to register with an email address.
 - This creates a local profile in your browser's `localStorage` to save your runs, favorites, and settings. No data is sent to a server.
 
@@ -91,6 +92,7 @@ The AI generation features require an API key.
 ---
 
 ## Credits
+
 Created by Shaun Gordon, AfflictedAI, 2025.
 
 Event timer data structure is based on the invaluable work done by the [gw2.ninja](https://gw2.ninja/) project.
