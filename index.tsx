@@ -363,7 +363,7 @@ const useUser = () => {
                 const loadedUser = JSON.parse(loggedInUser);
                 const defaultUser: User = {
                     email: '',
-                    settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8000' },
+                    settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8888' },
                     savedRuns: [],
                     favorites: []
                 };
@@ -395,7 +395,7 @@ const useUser = () => {
             const defaultUserStructure: Partial<User> = {
                 savedRuns: [],
                 favorites: [],
-                settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8000' }
+                settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8888' }
             };
             const fullUserData = { ...defaultUserStructure, ...loadedUser, email };
             localStorage.setItem('gw2commkit_user', JSON.stringify(fullUserData));
@@ -415,7 +415,7 @@ const useUser = () => {
         }
         const newUser: User = {
             email,
-            settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8000' },
+            settings: { gw2ApiKey: '', fastApiBaseUrl: 'http://localhost:8888' },
             savedRuns: [],
             favorites: [],
         };
@@ -1463,25 +1463,28 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
     const [showNetworkErrorHelp, setShowNetworkErrorHelp] = useState(false);
     const showToast = useToast();
     const apiKey = user.settings.gw2ApiKey;
-    const fastApiBaseUrl = user.settings.fastApiBaseUrl || 'http://localhost:8000';
+    const fastApiBaseUrl = user.settings.fastApiBaseUrl || 'http://localhost:8888';
 
     const popularEndpoints = useMemo(() => {
         if (apiProvider === 'fastapi') {
             return [
                 { label: 'Operational Check', value: '/v1/' },
+                { label: 'Cached Account', value: 'account' },
+                { label: 'Cached Characters', value: 'characters' },
+                { label: 'Cached Wallet', value: 'wallet' },
+                { label: 'Cached Buys', value: 'commerce/transactions/current/buys' },
+                { label: 'Cached Sells', value: 'commerce/transactions/current/sells' },
             ];
         }
         return [
             { label: 'Account Info', value: '/v2/account' },
             { label: 'Account Wallet', value: '/v2/account/wallet' },
-            { label: 'Account Achievements', value: '/v2/account/achievements' },
             { label: 'Characters List', value: '/v2/characters' },
-            { label: 'Character Core (edit name)', value: '/v2/characters/YourCharacterName/core' },
-            { label: 'Trading Post Prices (Ecto)', value: '/v2/commerce/prices?ids=19721' },
-            { label: 'Item Details (Ecto)', value: '/v2/items/19721' },
-            { label: 'Commerce Listings', value: '/v2/commerce/listings' },
             { label: 'Currencies', value: '/v2/currencies' },
-            { label: 'Gem Exchange', value: '/v2/commerce/exchange/gems?quantity=1000' },
+            { label: 'Item Details', value: '/v2/items' },
+            { label: 'Commerce Listings', value: '/v2/commerce/listings' },
+            { label: 'Commerce Prices', value: '/v2/commerce/prices' },
+            { label: 'Gem Exchange', value: '/v2/commerce/exchange/gems' },
             { label: 'Current Game Build', value: '/v2/build' },
             { label: 'All World IDs', value: '/v2/worlds' },
         ];
@@ -1519,7 +1522,11 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
             url = `https://api.guildwars2.com${endpoint}`;
         } else {
             // FastAPI
-            url = `${fastApiBaseUrl}${endpoint.startsWith('/') ? endpoint : '/' + endpoint}`;
+            if (endpoint === '/v1/') {
+                url = `${fastApiBaseUrl}${endpoint}`;
+            } else {
+                url = `${fastApiBaseUrl}/v1/data/${endpoint}`;
+            }
         }
 
         try {
@@ -1662,7 +1669,7 @@ function ApiExplorerPage({ user, setActiveTab }: { user: User; setActiveTab: (ta
 
 function SettingsPage({ user, updateUser, onLogout }: { user: User, updateUser: (u: User) => void, onLogout: () => void }) {
     const [gw2ApiKey, setGw2ApiKey] = useState(user.settings.gw2ApiKey || '');
-    const [fastApiBaseUrl, setFastApiBaseUrl] = useState(user.settings.fastApiBaseUrl || 'http://localhost:8000');
+    const [fastApiBaseUrl, setFastApiBaseUrl] = useState(user.settings.fastApiBaseUrl || 'http://localhost:8888');
     const showToast = useToast();
 
     const handleSave = () => {
@@ -1676,6 +1683,45 @@ function SettingsPage({ user, updateUser, onLogout }: { user: User, updateUser: 
         showToast('Settings saved!');
     };
 
+    const handlePopulateDb = async () => {
+        if (!gw2ApiKey) {
+            showToast('Please enter your GW2 API key before populating the database.');
+            return;
+        }
+
+        showToast('Starting database population...'); // Give immediate feedback
+
+        try {
+            const response = await fetch(`${fastApiBaseUrl}/v1/populate-db`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ apiKey: gw2ApiKey }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                const { successful_endpoints = [], failed_endpoints = [] } = result;
+                let summary = `DB Population Complete. Success: ${successful_endpoints.length}, Failed: ${failed_endpoints.length}.`;
+                if (failed_endpoints.length > 0) {
+                    summary += ` Check console for details on failures.`;
+                    console.error('Failed endpoints:', failed_endpoints);
+                }
+                showToast(summary);
+            } else {
+                // Handle HTTP errors from the backend (e.g., 401, 503)
+                const errorDetail = result.detail || `HTTP ${response.status}: ${response.statusText}`;
+                showToast(`Error: ${errorDetail}`);
+                console.error('Failed to populate database:', errorDetail);
+            }
+        } catch (error) {
+            showToast('Network Error: Could not connect to the backend. Is it running?');
+            console.error('Error populating database:', error);
+        }
+    };
+
     return (
         <div className="gw2-container-border p-6 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold mb-6">Settings</h2>
@@ -1687,9 +1733,11 @@ function SettingsPage({ user, updateUser, onLogout }: { user: User, updateUser: 
                 </div>
 
                 <div className="pt-4 border-t border-slate-700">
+                    <h3 className="text-xl font-bold mb-4">Backend Settings</h3>
                     <label htmlFor="fast-api-url" className="block text-lg font-medium text-slate-300 mb-2">Fast-API Base URL</label>
-                    <input id="fast-api-url" type="text" value={fastApiBaseUrl} onChange={e => setFastApiBaseUrl(e.target.value)} className="w-full p-2 bg-slate-700 rounded-md text-slate-200" placeholder="http://localhost:8000" />
+                    <input id="fast-api-url" type="text" value={fastApiBaseUrl} onChange={e => setFastApiBaseUrl(e.target.value)} className="w-full p-2 bg-slate-700 rounded-md text-slate-200" placeholder="http://localhost:8888" />
                     <p className="text-sm text-slate-400 mt-2">URL for your local Fast-API backend service. Used in API Explorer.</p>
+                    <button onClick={handlePopulateDb} className="gw2-button mt-4">Create and Populate Local Database</button>
                 </div>
 
                 <div className="flex justify-between items-center pt-8">
