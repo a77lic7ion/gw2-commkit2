@@ -1,0 +1,13 @@
+@echo off
+echo Starting GW2 Commander's Toolkit...
+
+if not exist node_modules (
+    echo Installing dependencies...
+    call npm install
+)
+
+echo Opening browser...
+start "" "http://localhost:5173"
+
+echo Starting development server...
+call npm run dev
